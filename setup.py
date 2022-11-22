@@ -4,6 +4,8 @@ from os import path
 import re
 
 package_name = 'grib_util'
+description = 'Read and download grib files from various weather agencies'
+keywords = 'grib, cds, ERA5, JRA55'
 
 root_dir = path.abspath(path.dirname(__file__))
 
@@ -33,8 +35,8 @@ setup(
     author=author,
     author_email=author_email,
     url=url,
-    description='Read and download grib files from various weather agencies',
-    keywords='キーワード1, キーワード2, キーワード3',
+    description=description,
+    keywords=keywords,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
