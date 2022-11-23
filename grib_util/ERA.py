@@ -226,6 +226,6 @@ class reader:
                 self.lat = msg.distinctLatitudes
                 self.lon = msg.distinctLongitudes
                 self.first_flag = False
-            if self.s_datetime <= msg.validDate and msg.validDate < self.e_datetime + dt.timedelta(days=1):
+            if self.s_datetime <= msg.validDate and msg.validDate < self.e_datetime + dt.timedelta(seconds=1):
                 res[msg.validDate.strftime('%Y-%m-%dT%H')] = msg.values
         return res
