@@ -178,7 +178,10 @@ def downloader(savedir:str, variables:list, years:list, months:list, area:list, 
                 the_ym = dt.date(y, m, 1)
                 print(f'>>> {the_ym.strftime("%Y-%m")}')
 
-                filename = f'{savepath}/{str(y).zfill(4)}{str(m).zfill(2)}-{v}.grib'
+                if h == 'single':
+                    filename = f'{savepath}/{str(y).zfill(4)}{str(m).zfill(2)}-{v}.grib'
+                else:
+                    filename = f'{savepath}/{str(y).zfill(4)}{str(m).zfill(2)}-{h}hPa-{v}.grib'
                 if os.path.isfile(filename):
                     print(f'  > ! {filename} is already exist.')
                     continue
